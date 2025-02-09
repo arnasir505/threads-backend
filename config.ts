@@ -1,6 +1,6 @@
 import { configDotenv } from 'dotenv';
 
-configDotenv({ path: '.env' })
+configDotenv({ path: '.env' });
 
 const config = {
   port: (process.env['PORT'] && parseInt(process.env['PORT'])) || '8000',
@@ -10,7 +10,7 @@ const config = {
   IpWhiteList: [
     'http://localhost:3000',
     'http://localhost:5173',
-    process.env['ALLOWED_ORIGIN'] || '',
+    process.env['ALLOWED_ORIGIN']!,
   ],
   JwtAccessExpiresAt: 60 * 15,
   JwtRefreshExpiresAt: 1000 * 60 * 60 * 370,

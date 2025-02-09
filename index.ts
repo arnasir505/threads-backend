@@ -30,6 +30,7 @@ const run = async () => {
 
   app.listen(config.port, () => {
     console.log(`Server running at ${localhost}`);
+    console.log(config.IpWhiteList)
   });
 
   process.on('exit', () => {
